@@ -81,7 +81,7 @@
         src="https://www.static-contents.youth4work.com/university/Documents/Colleges/CollegeBanner/dacb900f-147e-4a06-b860-7ab861e950a8.png"
         alt="image">
     <h1 style="font-size:60px">Give Answer..</h1>
-    {% comment %} <img src="https://c.tenor.com/dJfugj3uAwEAAAAj/love-cute.gif" class="oye"> {% endcomment %}
+    
 
     <form action="{% url 'answerhai' ans.id %}" method="POST" onsubmit="return validate()">
         {% csrf_token %}
@@ -102,7 +102,7 @@
             <textarea id="question" name="ans" rows="6" cols="30" class="z"></textarea>
 
             <button type="submit" class="a">
-                <h2>Create</h2>
+                <h2>Send</h2>
             </button>
         </div>
     </form>

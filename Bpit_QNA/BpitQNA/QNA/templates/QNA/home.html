@@ -16,11 +16,11 @@
         }
 
         .ans {
-            background-color: aqua;
+            background-color: rgb(77, 92, 92);
         }
 
         .ans:hover {
-            background-color: rgb(240, 241, 213);
+            background-color: rgb(25, 26, 25);
         }
 
         .noans {
@@ -35,20 +35,23 @@
         h1:hover {
             color: purple;
         }
-        h2{
-            color:rgb(240, 235, 235);
+
+        h2 {
+            color: rgb(168, 109, 109);
             text-align: end;
         }
     </style>
 </head>
 
-<body bgcolor="rgb(79, 189, 116)">
-<a href="/chat/"><h1>Chat</h1></a>
+<body background="https://wallpapercave.com/wp/wp5471067.jpg">
+
     <img style="border-style:solid;border-color: rgb(24, 23, 23);width:100%;margin:1px;border-radius: 0%;" height="200"
         src="https://www.static-contents.youth4work.com/university/Documents/Colleges/CollegeBanner/dacb900f-147e-4a06-b860-7ab861e950a8.png"
         alt="image">
     <h2><a href="/AskQuestion"><u>Ask Your Question..</u></a></h2>
-
+    <a href="/chat/">
+        <h1>Chat</h1>
+    </a>
     <h1 style="font-size:60px"> All Questions..</h1>
 
     {% for Question in Questions|slice:"::-1" %}
@@ -59,7 +62,7 @@
         <a href="{% url 'specificans' Question.id %}">
             <h3 style="margin-left:10px;font-size:30px">{{Question.Title|title}}</h3>
         </a>
-        <h3 style="margin-left:10px;font-size:25px">{{Question.Message|title}}</h3>
+        <h3 style="margin-left:10px;font-size:25px;color:white">{{Question.Message|title}}</h3>
     </div><br>
 
 
