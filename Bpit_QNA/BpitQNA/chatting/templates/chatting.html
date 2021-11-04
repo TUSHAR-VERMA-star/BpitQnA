@@ -5,13 +5,13 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <title>CHATTING SHATTING</title>
+  <title>BpitQnA</title>
   <style>
+    
     a {
       text-decoration: none;
     }
@@ -43,14 +43,55 @@
       color: rgb(240, 235, 235);
       text-align: end;
     }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(124, 113, 113);
+      border-radius: 25px;
+      
+    }
+
+    li {
+      float: left;
+      font-size: 20px;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+      border-radius: 25px;
+    }
+
+    .active {
+      background-color: #04AA6D;
+    }
   </style>
 </head>
 
 <body background="https://wallpapercave.com/wp/wp5471067.jpg">
+  
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/AskQuestion">Ask Your Question</a></li>
+    <li><a href="/chat/">Chat</a></li>
+    <li><a href="/">Notes</a></li>
+    <li><a href="/aboutus">About Us</a></li>
+    <li><a href="/">Contact Us</a></li>
+  </ul>
   <div class=container>
     <font color="white">
       <br>
-      <h1 style="font-family:Times New Roman">CHATTING SHATTING</h1>
+      <br>
       <form action='/chat/' onsubmit="return validate()" method='post'> {% csrf_token %}
         <button type="submit" class="btn btn-danger">Message</button>
       </form>
@@ -60,7 +101,7 @@
 
       {% for i in catprods|slice:"::-1" %}
       <div class="ans" style="border: 2px outset rgb(218, 56, 91);border-radius:20px; ">
-        <h3 style="margin-left:10px;font-size:25px;color:azure">{{ i.name|title }}</h3>
+        <h3 style="margin-left:10px;font-size:25px;color:rgb(218, 238, 238)">{{ i.name|title }}</h3>
         <h3 style="margin-left:10px;font-size:30px">{{ i.text|title }}</h3>
 
       </div><br>

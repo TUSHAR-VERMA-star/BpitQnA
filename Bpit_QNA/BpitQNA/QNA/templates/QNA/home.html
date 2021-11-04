@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME PAGE</title>
+    <title>BpitQnA</title>
     <style>
         a {
             text-decoration: none;
@@ -40,19 +40,58 @@
             color: rgb(168, 109, 109);
             text-align: end;
         }
+
+        .navv {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(124, 113, 113);
+            border-radius: 25px;
+        }
+
+        li {
+            float: left;
+            font-size: 20px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+            border-radius: 25px;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
     </style>
 </head>
 
 <body background="https://wallpapercave.com/wp/wp5471067.jpg">
 
-    <img style="border-style:solid;border-color: rgb(24, 23, 23);width:100%;margin:1px;border-radius: 0%;" height="200"
-        src="https://www.static-contents.youth4work.com/university/Documents/Colleges/CollegeBanner/dacb900f-147e-4a06-b860-7ab861e950a8.png"
-        alt="image">
-    <h2><a href="/AskQuestion"><u>Ask Your Question..</u></a></h2>
-    <a href="/chat/">
-        <h1>Chat</h1>
-    </a>
-    <h1 style="font-size:60px"> All Questions..</h1>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/AskQuestion">Ask Your Question</a></li>
+        <li><a href="/chat/">Chat</a></li>
+        <li><a href="/">Notes</a></li>
+        <li><a href="/aboutus">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+    <br><br>
+    <!-- <h1 style="font-size:60px"> All Questions..</h1> -->
 
     {% for Question in Questions|slice:"::-1" %}
     {% if Question.SolvedBy %}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASk Question</title>
+    <title>BpitQnA</title>
     <style>
         .container {
             border-radius: 25px;
@@ -59,12 +59,12 @@
         }
 
         h1 {
-            color:white;
+            color: white;
             text-align: center;
         }
 
         h1:hover {
-            color: purple;
+            color: rgb(209, 179, 209);
         }
 
         .oye {
@@ -73,14 +73,49 @@
             height: 400px;
             width: 400px;
         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(124, 113, 113);
+            border-radius: 25px;
+        }
+
+        li {
+            float: left;
+            font-size: 20px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+            border-radius: 25px;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
     </style>
 </head>
 
-<body bgcolor="rgb(79, 189, 116)">
-    <img style="border-style:solid;border-color: rgb(24, 23, 23);width:100%;margin:3px;" height="200"
-        src="https://www.static-contents.youth4work.com/university/Documents/Colleges/CollegeBanner/dacb900f-147e-4a06-b860-7ab861e950a8.png"
-        alt="image">
-
+<body background="https://wallpapercave.com/wp/wp5471067.jpg">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/AskQuestion">Ask Your Question</a></li>
+        <li><a href="/chat/">Chat</a></li>
+        <li><a href="/">Notes</a></li>
+        <li><a href="/">About Us</a></li>
+        <li><a href="/">Contact Us</a></li>
+    </ul>
     <h1 style="text-align:center;font-size:60px;">Ask Your Question</h1>
     <!-- <img src="https://c.tenor.com/dJfugj3uAwEAAAAj/love-cute.gif" class="oye" > -->
 

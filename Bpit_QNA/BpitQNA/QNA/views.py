@@ -49,3 +49,9 @@ def answer(request,id):
             x.save()
     return render(request,"QNA/thanks.html")
 
+def aboutus(request):
+    return render(request,"aboutus.html")
+
+    
+def contact(request):
+    return render(request,"contact.html")

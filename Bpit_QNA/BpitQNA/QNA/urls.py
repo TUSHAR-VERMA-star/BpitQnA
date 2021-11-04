@@ -6,6 +6,8 @@ urlpatterns = [
     path('',views.home),
     path("AskQuestion/",views.AskQuestion),
     path("<int:id>/",views.specific,name="specificans"),
-    path("answer/<int:id>/",views.answer,name="answerhai")
+    path("answer/<int:id>/",views.answer,name="answerhai"),
+    path('aboutus/',views.aboutus),
+    path('contact/',views.contact),
     
 ]
